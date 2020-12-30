@@ -1,0 +1,350 @@
+/*
+	reinimax' CSS framework
+	-----------------------
+	Contents:
+		1. CSS reset by Eric Meyer
+		2. Variables
+		3. General stuff & Typography
+		4. Grid-System
+		5. Styles for form-elements
+		6. Utilities
+*/
+/* -------------------------------------------
+	1. CSS reset by Eric Meyer 
+------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* -------------------------------------------
+	2. Variables 
+------------------------------------------- */
+/* Typography */
+/* Colors */
+/* I  leave it for now with this. The practicality will have to be tested*/
+/* Aspect ratio for the image bottom hack */
+/*
+	1:1 -> 100%
+ 	16:9 -> 56.25%
+	4:3 -> 75%
+	3:2 -> 66.66%
+*/
+/* -------------------------------------------
+	3. General stuff & Typography 
+------------------------------------------- */
+/* Making everything border-box */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Sizing images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography */
+/* Overwriting line-height */
+body {
+  line-height: 1.5;
+}
+
+/* Setting sizes of h-elements*/
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+/* -------------------------------------------
+	3. Grid-System 
+------------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Default classes. They work with the smalles screensizes and up until
+another, responsive, class is added */
+.col-12 {
+  grid-column-start: span 12;
+}
+
+.col-11 {
+  grid-column-start: span 11;
+}
+
+.col-10 {
+  grid-column-start: span 10;
+}
+
+.col-9 {
+  grid-column-start: span 9;
+}
+
+.col-8 {
+  grid-column-start: span 8;
+}
+
+.col-7 {
+  grid-column-start: span 7;
+}
+
+.col-6 {
+  grid-column-start: span 6;
+}
+
+.col-5 {
+  grid-column-start: span 5;
+}
+
+.col-4 {
+  grid-column-start: span 4;
+}
+
+.col-3 {
+  grid-column-start: span 3;
+}
+
+.col-2 {
+  grid-column-start: span 2;
+}
+
+/* Responsive classes */
+@media (min-width: 768px) {
+  .col-m-12 {
+    grid-column-start: span 12;
+  }
+
+  .col-m-11 {
+    grid-column-start: span 11;
+  }
+
+  .col-m-10 {
+    grid-column-start: span 10;
+  }
+
+  .col-m-9 {
+    grid-column-start: span 9;
+  }
+
+  .col-m-8 {
+    grid-column-start: span 8;
+  }
+
+  .col-m-7 {
+    grid-column-start: span 7;
+  }
+
+  .col-m-6 {
+    grid-column-start: span 6;
+  }
+
+  .col-m-5 {
+    grid-column-start: span 5;
+  }
+
+  .col-m-4 {
+    grid-column-start: span 4;
+  }
+
+  .col-m-3 {
+    grid-column-start: span 3;
+  }
+
+  .col-m-2 {
+    grid-column-start: span 2;
+  }
+}
+@media (min-width: 980px) {
+  .col-l-12 {
+    grid-column-start: span 12;
+  }
+
+  .col-l-11 {
+    grid-column-start: span 11;
+  }
+
+  .col-l-10 {
+    grid-column-start: span 10;
+  }
+
+  .col-l-9 {
+    grid-column-start: span 9;
+  }
+
+  .col-l-8 {
+    grid-column-start: span 8;
+  }
+
+  .col-l-7 {
+    grid-column-start: span 7;
+  }
+
+  .col-l-6 {
+    grid-column-start: span 6;
+  }
+
+  .col-l-5 {
+    grid-column-start: span 5;
+  }
+
+  .col-l-4 {
+    grid-column-start: span 4;
+  }
+
+  .col-l-3 {
+    grid-column-start: span 3;
+  }
+
+  .col-l-2 {
+    grid-column-start: span 2;
+  }
+}
+/* -------------------------------------------
+	5. Styles for form-elements 
+------------------------------------------- */
+button {
+  cursor: pointer;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid #9f9f9f;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+/* -------------------------------------------
+	6. Utilities 
+------------------------------------------- */
+/* Turning a ul into a navbar. The class is supposed to be added to the ul */
+/* there may be better solutions, but I chose float for now, also because it leaves no
+gaps like display: inline-block */
+.nav-list > li {
+  float: left;
+  list-style-type: none;
+  padding: 0.5em;
+}
+.nav-list > li a {
+  padding: 0.5em;
+}
+
+.nav-list:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: left;
+}
+
+/* 
+  Using the "padding-bottom hack" to ensure all the images in a gallery have the same aspect ratio.
+  See: https://www.smashingmagazine.com/2013/09/responsive-images-performance-problem-case-study/
+  The images need to be wrapped by the image-wrapper class.
+  For this to work, the image-wrapper itself must reside in a containing block because its padding
+  is relative to its CONTAINING block! That means setting a width directly on the image-wrapper
+  will break the aspect ratio.
+*/
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+    This document contains styles specific to the current webpage.
+    @use "base" with ($a: x, $b: y, ...); to change predefined variables.
+*/
+
+/*# sourceMappingURL=style.css.map */
