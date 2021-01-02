@@ -278,7 +278,7 @@ another, responsive, class is added */
     grid-column-start: span 2;
   }
 }
-@media (min-width: 980px) {
+@media (min-width: 1000px) {
   .col-l-12 {
     grid-column-start: span 12;
   }
@@ -392,6 +392,31 @@ input {
 /* -------------------------------------------
 	6. Utilities 
 ------------------------------------------- */
+/* Fixed width-container that scales together with the breakpoints */
+.container-fixed {
+  max-width: 100%;
+}
+@media (min-width: 576px) {
+  .container-fixed {
+    max-width: 540px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container-fixed {
+    max-width: 720px !important;
+  }
+}
+@media (min-width: 1000px) {
+  .container-fixed {
+    max-width: 960px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fixed {
+    max-width: 1140px !important;
+  }
+}
+
 /* Classes for hiding and showing elements */
 .hidden {
   display: none;

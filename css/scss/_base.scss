@@ -73,7 +73,7 @@ table {
 /* Breakpoints */
 $breakpoint-s: 576px;
 $breakpoint-m: 768px;
-$breakpoint-l: 980px;
+$breakpoint-l: 1000px;
 $breakpoint-xl: 1200px;
 
 /* Typography */
@@ -264,6 +264,24 @@ input {
 /* -------------------------------------------
 	6. Utilities 
 ------------------------------------------- */
+
+/* Fixed width-container that scales together with the breakpoints */
+.container-fixed {
+	max-width: 100%;
+	@media (min-width: $breakpoint-s) {
+		max-width: $breakpoint-s - 36px !important;
+	}
+	@media (min-width: $breakpoint-m) {
+		max-width: $breakpoint-m - 48px !important;
+	}
+	@media (min-width: $breakpoint-l) {
+		max-width: $breakpoint-l - 40px !important;
+	}
+	@media (min-width: $breakpoint-xl) {
+		max-width: $breakpoint-xl - 60px !important;
+	}
+}
+
 /* Classes for hiding and showing elements */
 .hidden {display: none};
 .visible-block {display: block;}
