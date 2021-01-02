@@ -66,7 +66,7 @@ If you don't want to use SASS, I recommend to write your CSS in a separate style
 
 ### Using the grid
 
-The grid is based on CSS Grid and features 12 columns and four breakpoints at 576px (s), 768px (m), 980px (l) and 1200px (xl). These values are saved in variables and can be changed.
+The grid is based on CSS Grid and features 12 columns and four breakpoints at 576px (s), 768px (m), 980px (l) and 1200px (xl). These values are saved in variables and can be changed inside \_base.scss when necessary.
 
 Give the element that contains your grid-items the class `grid-container`. Each item gets a class that defines how many columns it spans (spanning 1 column is the default. There's no class for that). These classes are:
 
