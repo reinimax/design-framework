@@ -143,9 +143,11 @@ img {
 
 /* Typography */
 
-/* Overwriting line-height */
+/* Overwriting line-height and setting default font and color */
 body {
   line-height: 1.5;
+  font: $font-sans-serif;
+  color: $text-primary;
 }
 
 /* Setting sizes of h-elements*/
