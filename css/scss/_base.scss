@@ -89,6 +89,10 @@ $primary-color: rgb(175, 0, 0) !default;
 $primary-color-light: color.adjust($primary-color, $saturation: -50%, $lightness: 25%);
 $primary-color-dark: color.adjust($primary-color, $saturation: -60%, $lightness: 10%);
 
+$secondary-color: rgb(0, 70, 0) !default;
+$secondary-color-light: color.adjust($primary-color, $saturation: -50%, $lightness: 25%);
+$secondary-color-dark: color.adjust($primary-color, $saturation: -60%, $lightness: 10%);
+
 $complementary-color: color.complement($primary-color);
 $complementary-light: color.adjust($complementary-color, $saturation: -50%, $lightness: 25%);
 $complementary-dark: color.adjust($complementary-color, $saturation: -60%, $lightness: 10%);
