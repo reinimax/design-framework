@@ -8,12 +8,6 @@
     Variables: overwrite the ones you want to change. In the comments you find the defaults
 */
 
-/* Breakpoints */
-$breakpoint-s: base.$breakpoint-s; // 576px
-$breakpoint-m: base.$breakpoint-m; // 768px
-$breakpoint-l: base.$breakpoint-l; // 980px
-$breakpoint-xl: base.$breakpoint-xl; // 1200px
-
 /* Typography */
 $font-serif: base.$font-serif; // 100% Georgia, 'Times New Roman', Times, serif
 $font-sans-serif: base.$font-sans-serif; // 100% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
