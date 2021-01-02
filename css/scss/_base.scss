@@ -264,6 +264,10 @@ input {
 /* -------------------------------------------
 	6. Utilities 
 ------------------------------------------- */
+/* Classes for hiding and showing elements */
+.hidden {display: none};
+.visible-block {display: block;}
+.visible-flex {display: flex;}
 
 /* Turning a ul into a navbar. The class is supposed to be added to the ul */
 /* there may be better solutions, but I chose float for now, also because it leaves no
