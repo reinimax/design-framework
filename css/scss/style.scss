@@ -39,6 +39,19 @@ $bg-primary-dark: base.$bg-primary-dark; // same as $dark
 
 $aspect-ratio: base.$aspect-ratio; // 56.25%
 
+/* Variables that cannot be changed here. Prefix them like this: base.<variablename>
+
+$primary-color-light;
+$primary-color-dark;
+$secondary-color-light;
+$secondary-color-dark;
+$complementary-color;
+$complementary-light;
+$complementary-dark;
+
+$input-default;
+*/
+
 /*
     Your code starts here
 */

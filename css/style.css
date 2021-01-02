@@ -69,6 +69,7 @@ table {
 /* -------------------------------------------
 	2. Variables 
 ------------------------------------------- */
+/* Breakpoints */
 /* Typography */
 /* Colors */
 /* I  leave it for now with this. The practicality will have to be tested*/
@@ -100,9 +101,11 @@ img {
 }
 
 /* Typography */
-/* Overwriting line-height */
+/* Overwriting line-height and setting default font and color */
 body {
   line-height: 1.5;
+  font: 100% "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
 }
 
 /* Setting sizes of h-elements*/
@@ -185,6 +188,51 @@ another, responsive, class is added */
 }
 
 /* Responsive classes */
+@media (min-width: 576px) {
+  .col-s-12 {
+    grid-column-start: span 12;
+  }
+
+  .col-s-11 {
+    grid-column-start: span 11;
+  }
+
+  .col-s-10 {
+    grid-column-start: span 10;
+  }
+
+  .col-s-9 {
+    grid-column-start: span 9;
+  }
+
+  .col-s-8 {
+    grid-column-start: span 8;
+  }
+
+  .col-s-7 {
+    grid-column-start: span 7;
+  }
+
+  .col-s-6 {
+    grid-column-start: span 6;
+  }
+
+  .col-s-5 {
+    grid-column-start: span 5;
+  }
+
+  .col-s-4 {
+    grid-column-start: span 4;
+  }
+
+  .col-s-3 {
+    grid-column-start: span 3;
+  }
+
+  .col-s-2 {
+    grid-column-start: span 2;
+  }
+}
 @media (min-width: 768px) {
   .col-m-12 {
     grid-column-start: span 12;
@@ -275,6 +323,51 @@ another, responsive, class is added */
     grid-column-start: span 2;
   }
 }
+@media (min-width: 1200px) {
+  .col-xl-12 {
+    grid-column-start: span 12;
+  }
+
+  .col-xl-11 {
+    grid-column-start: span 11;
+  }
+
+  .col-xl-10 {
+    grid-column-start: span 10;
+  }
+
+  .col-xl-9 {
+    grid-column-start: span 9;
+  }
+
+  .col-xl-8 {
+    grid-column-start: span 8;
+  }
+
+  .col-xl-7 {
+    grid-column-start: span 7;
+  }
+
+  .col-xl-6 {
+    grid-column-start: span 6;
+  }
+
+  .col-xl-5 {
+    grid-column-start: span 5;
+  }
+
+  .col-xl-4 {
+    grid-column-start: span 4;
+  }
+
+  .col-xl-3 {
+    grid-column-start: span 3;
+  }
+
+  .col-xl-2 {
+    grid-column-start: span 2;
+  }
+}
 /* -------------------------------------------
 	5. Styles for form-elements 
 ------------------------------------------- */
@@ -299,6 +392,19 @@ input {
 /* -------------------------------------------
 	6. Utilities 
 ------------------------------------------- */
+/* Classes for hiding and showing elements */
+.hidden {
+  display: none;
+}
+
+.visible-block {
+  display: block;
+}
+
+.visible-flex {
+  display: flex;
+}
+
 /* Turning a ul into a navbar. The class is supposed to be added to the ul */
 /* there may be better solutions, but I chose float for now, also because it leaves no
 gaps like display: inline-block */
@@ -344,7 +450,27 @@ gaps like display: inline-block */
 
 /*
     This document contains styles specific to the current webpage.
-    @use "base" with ($a: x, $b: y, ...); to change predefined variables.
+*/
+/*
+    Variables: overwrite the ones you want to change. In the comments you find the defaults
+*/
+/* Breakpoints */
+/* Typography */
+/* Colors */
+/* Variables that cannot be changed here. Prefix them like this: base.<variablename>
+
+$primary-color-light;
+$primary-color-dark;
+$secondary-color-light;
+$secondary-color-dark;
+$complementary-color;
+$complementary-light;
+$complementary-dark;
+
+$input-default;
+*/
+/*
+    Your code starts here
 */
 
 /*# sourceMappingURL=style.css.map */
