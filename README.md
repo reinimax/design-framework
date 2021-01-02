@@ -11,7 +11,7 @@ I built this framework as the final project in the HTML/CSS module of [The Odin 
 3. **General stuff & Typography:** Some general settings that are, I believe, universally useful. This includes setting everything to border-box, giving images a max-width of 100% and setting line-height to the standard 150%. Also, the `<h1>` - `<h6>` elements get a bigger font-size to introduce some visual hierarchy from the start.
 4. **Grid-System:** The grid is based on CSS Grid and features 12 columns and four breakpoints. See below on how to use it.
 5. **Styles for form-elements:** Some basic styling for buttons and `<input>`-fields.
-6. **Utilities:** Classes for hiding and showing elements, for styling lists as navigation and for manipulating the aspect ratio of images.
+6. **Utilities:** Some utility-classes. See below for details.
 
 ## So, how do I use it?
 
@@ -66,7 +66,7 @@ If you don't want to use SASS, I recommend to write your CSS in a separate style
 
 ### Using the grid
 
-The grid is based on CSS Grid and features 12 columns and four breakpoints at 576px (s), 768px (m), 980px (l) and 1200px (xl). These values are saved in variables and can be changed inside \_base.scss when necessary.
+The grid is based on CSS Grid and features 12 columns and four breakpoints at 576px (s), 768px (m), 1000px (l) and 1200px (xl). These values are saved in variables and can be changed inside \_base.scss when necessary.
 
 Give the element that contains your grid-items the class `grid-container`. Each item gets a class that defines how many columns it spans (spanning 1 column is the default. There's no class for that). These classes are:
 
@@ -90,6 +90,10 @@ They would sit next to each other and equally divide the space inside the contai
 They would sit next to each other and the first element would take up 75% of the space and the second one 25% on screensizes greater than 980px.
 
 ### Using utilities
+
+#### Fixed Container
+
+Add the class `.container-fixed` to create a container that has a fixed width which scales with the breakpoints of the grid-system. Note that below the small breakpoint (576px by default) the width is set to 100%.
 
 #### Hiding and showing elements
 
