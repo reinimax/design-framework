@@ -93,7 +93,7 @@ They would sit next to each other and the first element would take up 75% of the
 
 #### Fixed Container
 
-Add the class `.container-fixed` to create a container that has a fixed width which scales with the breakpoints of the grid-system. Note that below the small breakpoint (576px by default) the width is set to 100%.
+Add the class `container-fixed` to create a container that has a fixed width which scales with the breakpoints of the grid-system. Note that below the small breakpoint (576px by default) the width is set to 100%.
 
 #### Hiding and showing elements
 
