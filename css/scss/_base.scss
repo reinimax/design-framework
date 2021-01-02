@@ -71,10 +71,10 @@ table {
 ------------------------------------------- */
 
 /* Breakpoints */
-$breakpoint-s: 576px;
-$breakpoint-m: 768px;
-$breakpoint-l: 980px;
-$breakpoint-xl: 1200px;
+$breakpoint-s: 576px !default;
+$breakpoint-m: 768px !default;
+$breakpoint-l: 980px !default;
+$breakpoint-xl: 1200px !default;
 
 /* Typography */
 $font-serif: 100% Georgia, 'Times New Roman', Times, serif !default;
