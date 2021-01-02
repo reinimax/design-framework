@@ -34,7 +34,7 @@ The index.html is an empty HTML document that gets you started. It already uses 
 The style.css and style.css.map are created by SASS. In the scss-directory there are two files: \_base.scss contains the framework. I recommend not to modify it (unless you want to use it as a base for your own framework). The style.scss imports this file via the `@use`-rule and is supposed to contain your custom CSS.
 You can ignore the .prettierignore. I use it to disable auto-formatting in \_base.css. Oh, and of course you want to write your own README.md or delete it altogether.
 
-### OK, I know now how it's structured, but how do I acutally use it?
+### OK, I know now how it's structured, but how do I actually use it?
 
 There are two ways to use the framework: Using SASS or not using SASS. I recommend using SASS.
 
@@ -73,7 +73,7 @@ Give the element that contains your grid-items the class `grid-container`. Each 
 - `col-2` up to `col-12`: These are the default classes that will apply on all screen resolutions, unless overwritten
 - `col-s-2` up to `col-s-12`: These classes apply if the screen width is at least 576px.
 - `col-m-2` up to `col-m-12`: These classes apply if the screen width is at least 768px.
-- `col-l-2` up to `col-l-12`: These classes apply if the screen width is at least 980px.
+- `col-l-2` up to `col-l-12`: These classes apply if the screen width is at least 1000px.
 - `col-xl-2` up to `col-xl-12`: These classes apply if the screen width is at least 1200px.
 
 Apply classes for each resolution to each grid-item, make sure they add up to a sum of 12, and enjoy the simple, responsive layout that you just created. An example would be:
@@ -86,8 +86,8 @@ Apply classes for each resolution to each grid-item, make sure they add up to a 
 ```
 
 The two elements would sit below each other and span the full width of the container on screensizes up to 767px.
-They would sit next to each other and equally divide the space inside the container on screensizes between 768px and 979px.
-They would sit next to each other and the first element would take up 75% of the space and the second one 25% on screensizes greater than 980px.
+They would sit next to each other and equally divide the space inside the container on screensizes between 768px and 999px.
+They would sit next to each other and the first element would take up 75% of the space and the second one 25% on screensizes greater than 999px.
 
 ### Using utilities
 
