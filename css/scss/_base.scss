@@ -93,17 +93,17 @@ $complementary-color: color.complement($primary-color);
 $complementary-light: color.adjust($complementary-color, $saturation: -50%, $lightness: 25%);
 $complementary-dark: color.adjust($complementary-color, $saturation: -60%, $lightness: 10%);
 
-$text-primary: $dark;
+$text-primary: $dark !default;
 $text-secondary: color.adjust($dark, $lightness: 20%) !default;
-$text-primary-light: $light;
-$text-secondary-light: color.adjust($light, $alpha: -0.3);
+$text-primary-light: $light !default;
+$text-secondary-light: color.adjust($light, $alpha: -0.3) !default;
 $link-default: rgb(0, 0, 238) !default;
 $link-hover: rgb(0, 0, 238) !default;
 $link-active: rgb(238, 0, 0) !default;
 $link-visited: rgb(128, 0, 128) !default;
 
-$bg-primary-light: $light;
-$bg-primary-dark: $dark;
+$bg-primary-light: $light !default;
+$bg-primary-dark: $dark !default;
 
 $input-default: color.adjust($dark, $lightness: 50%);
 
