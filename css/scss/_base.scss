@@ -94,7 +94,7 @@ $complementary-light: color.adjust($complementary-color, $saturation: -50%, $lig
 $complementary-dark: color.adjust($complementary-color, $saturation: -60%, $lightness: 10%);
 
 $text-primary: $dark;
-$text-secondary: color.adjust($dark, $lightness: 20%);
+$text-secondary: color.adjust($dark, $lightness: 20%) !default;
 $text-primary-light: $light;
 $text-secondary-light: color.adjust($light, $alpha: -0.3);
 $link-default: rgb(0, 0, 238) !default;
