@@ -9,9 +9,9 @@ I built this framework as the final project in the HTML/CSS module of [The Odin 
 1. **CSS reset by Eric Meyer:** I used this one in most of my other projects and am very happy with it. So I copied it into the framework. For information on the version and license (and a link to the author's homepage), see the comment directly in the file.
 2. **Variables:** SASS variables for fonts, colors and other stuff. An explanation on how to use them follows below.
 3. **General stuff & Typography:** Some general settings that are, I believe, universally useful. This includes setting everything to border-box, giving images a max-width of 100% and setting line-height to the standard 150%. Also, the `<h1>` - `<h6>` elements get a bigger font-size to introduce some visual hierarchy from the start.
-4. **Grid-System:** The grid is based on CSS Grid and features 12 columns and two breakpoints. See below on how to use it.
+4. **Grid-System:** The grid is based on CSS Grid and features 12 columns and four breakpoints. See below on how to use it.
 5. **Styles for form-elements:** Some basic styling for buttons and `<input>`-fields.
-6. **Utilities:** For now, this section contains only two things: a class for styling lists as navigation and a class for manipulating the aspect ratio of images.
+6. **Utilities:** Classes for hiding and showing elements, for styling lists as navigation and for manipulating the aspect ratio of images.
 
 ## So, how do I use it?
 
@@ -48,25 +48,17 @@ sass css/scss/style.scss css/style.css --watch
 
 ##### Using SASS variables:
 
-By default, \_base.scss is imported to style.scss via the `@use`-rule. This means that the variables in \_base.scss have their own namespace and must be prefixed in order to be used. For example:
+Most variables form \_base.scss are declared again in style.scss and assigned their default values from \_base.scss. Simply overwrite the values you want to change.
+
+There is also a list with variables defined in \_base.scss that cannot be changed in style.scss. If you use them, you have to prefix them with `base.`
+
+For example:
 
 ```
-p {
-    color: base.$link-default;
+div {
+    background-color: base.$complementary-color;
 }
 ```
-
-If you want to reassign a value to a variable, use the `@use with`-syntax:
-
-```
-@use "base" with (
-    $primary-color: rgb(0, 128, 128),
-    $font-serif: 100% 'Times New Roman', Times, serif,
-    );
-}
-```
-
-For further information on how to work with SASS, see the [SASS documentation](https://sass-lang.com/documentation).
 
 #### Not using SASS:
 
@@ -74,13 +66,15 @@ If you don't want to use SASS, I recommend to write your CSS in a separate style
 
 ### Using the grid
 
-The grid is based on CSS Grid and features 12 columns and two breakpoints: one "medium" @768px and one "large" @980px.
+The grid is based on CSS Grid and features 12 columns and four breakpoints at 576px (s), 768px (m), 980px (l) and 1200px (xl). These values are saved in variables and can be changed.
 
 Give the element that contains your grid-items the class `grid-container`. Each item gets a class that defines how many columns it spans (spanning 1 column is the default. There's no class for that). These classes are:
 
 - `col-2` up to `col-12`: These are the default classes that will apply on all screen resolutions, unless overwritten
+- `col-s-2` up to `col-s-12`: These classes apply if the screen width is at least 576px.
 - `col-m-2` up to `col-m-12`: These classes apply if the screen width is at least 768px.
 - `col-l-2` up to `col-l-12`: These classes apply if the screen width is at least 980px.
+- `col-xl-2` up to `col-xl-12`: These classes apply if the screen width is at least 1200px.
 
 Apply classes for each resolution to each grid-item, make sure they add up to a sum of 12, and enjoy the simple, responsive layout that you just created. An example would be:
 
@@ -96,6 +90,10 @@ They would sit next to each other and equally divide the space inside the contai
 They would sit next to each other and the first element would take up 75% of the space and the second one 25% on screensizes greater than 980px.
 
 ### Using utilities
+
+#### Hiding and showing elements
+
+Add the class `hidden` to an element to set its display-property to `none`. Add the classes `visible-block` or `visible-flex` to set the display-property to `block` or `flex`.
 
 #### Turning a list into a navigation bar
 
