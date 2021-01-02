@@ -70,6 +70,12 @@ table {
 	2. Variables 
 ------------------------------------------- */
 
+/* Breakpoints */
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-l: 980px;
+$breakpoint-xl: 1200px;
+
 /* Typography */
 $font-serif: 100% Georgia, 'Times New Roman', Times, serif !default;
 $font-sans-serif: 100% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
@@ -171,7 +177,7 @@ another, responsive, class is added */
 .col-2 {grid-column-start: span 2;}
 
 /* Responsive classes */
-@media (min-width: 576px) {
+@media (min-width: $breakpoint-s) {
 	.col-s-12 {grid-column-start: span 12;}
 	.col-s-11 {grid-column-start: span 11;}
 	.col-s-10 {grid-column-start: span 10;}
@@ -185,7 +191,7 @@ another, responsive, class is added */
 	.col-s-2 {grid-column-start: span 2;}
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-m) {
 	.col-m-12 {grid-column-start: span 12;}
 	.col-m-11 {grid-column-start: span 11;}
 	.col-m-10 {grid-column-start: span 10;}
@@ -199,7 +205,7 @@ another, responsive, class is added */
 	.col-m-2 {grid-column-start: span 2;}
 }
 
-@media (min-width: 980px) {
+@media (min-width: $breakpoint-l) {
 	.col-l-12 {grid-column-start: span 12;}
 	.col-l-11 {grid-column-start: span 11;}
 	.col-l-10 {grid-column-start: span 10;}
@@ -213,7 +219,7 @@ another, responsive, class is added */
 	.col-l-2 {grid-column-start: span 2;}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-xl) {
 	.col-xl-12 {grid-column-start: span 12;}
 	.col-xl-11 {grid-column-start: span 11;}
 	.col-xl-10 {grid-column-start: span 10;}
