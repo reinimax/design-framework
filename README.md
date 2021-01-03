@@ -134,4 +134,4 @@ Wrap the image with another element that gets the class `image-wrapper`.
 
 ## Demos
 
-[The Odin Project Clone](https://github.com/reinimax/top-clone)
+[The Odin Project Clone](https://github.com/reinimax/top-clone) - [View live](https://reinimax.github.io/top-clone/)
